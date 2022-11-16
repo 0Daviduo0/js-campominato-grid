@@ -125,6 +125,11 @@ body{
 
         }
 
+            .selezionata{
+                color: var(--text-color);
+                background-color: aqua;
+            }
+
     footer{
         width: 100%;
         height: 5%;

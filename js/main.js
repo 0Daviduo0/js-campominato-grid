@@ -65,12 +65,22 @@ playButton.addEventListener("click", function generaGriglia() {
         
             for (let i = 1; i <= 49; i++){
                 
-                const gridItem = `<div class="grid_item "> ${i} <div>`;
+                const gridItem = `<div class="grid_item " id="gameCell"> ${i} <div>`;
                 contenitoreGriglia.innerHTML += gridItem;
 
             }
         
     }
-    
+
 })
+
+
+
+
+
+
+
+
+
+
 
