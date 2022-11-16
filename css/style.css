@@ -86,7 +86,6 @@ body{
             margin: 50px 0;
             display: grid;
             outline: var(--DEBUG-borders);
-            
         }
             
             .griglia_facile{
@@ -111,6 +110,11 @@ body{
 
         .grid_item{
             outline: var(--DEBUG-borders);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
         }
 
     footer{
