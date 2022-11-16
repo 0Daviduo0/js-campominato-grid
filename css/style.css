@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --DEBUG-borders: black solid 1px;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+    header{
+        width: 100%;
+        height: 10%;
+        background-color: #5E68C2;
+        outline: var(--DEBUG-borders);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+        .title{
+            color: #fff;
+            font-size: 40px;
+
+            display: flex;
+            align-items: center;
+        }
+
+            .logo{
+                font-size: 50px;
+                padding-right: 10px;
+            }
+        
+        .settings_start{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+            #settings_start{
+                display: flex;
+                align-items: center;
+            }
+
+                .difficulty{
+                    display: flex;
+                    flex-direction: column;
+                    padding-right: 30px;
+                }
+
+                #difficulty_label{
+                    color: #fff;
+                }
+
+                #difficulty{
+                    margin-top: 10px;
+                }
+
+                #play_button{
+                    padding: 5px;
+                    border-radius: 15px;
+                }
+
+    main{
+        width: 100%;
+        height: 85%;
+        background-color: #454c8f;
+        outline: var(--DEBUG-borders);
+    }
+
+    footer{
+        width: 100%;
+        height: 5%;
+        background-color: #2c305c;
+        outline: var(--DEBUG-borders);
+    }
