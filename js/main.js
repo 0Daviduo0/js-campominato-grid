@@ -4,10 +4,12 @@ console.log("Contenitore trovato!", contenitoreGriglia)
 let difficoltaSelezionata = document.getElementById("difficulty");
 
 let playButton = document.getElementById("play_button");
+let isPlayButtonClicked = false;
 
 playButton.addEventListener("click", function generaGriglia() {
     console.log(difficoltaSelezionata.value);
     console.log("pulsante premuto")
+    isPlayButtonClicked = true;
 
 
     if (difficoltaSelezionata.value == "facile"){
@@ -24,8 +26,20 @@ playButton.addEventListener("click", function generaGriglia() {
 
             for (let i = 1; i <= 100; i++){
                 
-                const gridItem = `<div class="grid_item "> ${i} <div>`;
-                contenitoreGriglia.innerHTML += gridItem;
+                var gridItem = document.createElement('div');
+
+
+                gridItem.addEventListener("click", function selezionata(){
+                    this.classList.toggle("selezionata")
+                    console.log("cella selezionata:", i)
+                })
+
+                gridItem.className = "grid_item";
+                gridItem.textContent += i;
+
+                
+
+                contenitoreGriglia.appendChild(gridItem)
 
             }
         
@@ -45,9 +59,19 @@ playButton.addEventListener("click", function generaGriglia() {
 
             for (let i = 1; i <= 81; i++){
                 
-                const gridItem = `<div class="grid_item "> ${i} <div>`;
-                contenitoreGriglia.innerHTML += gridItem;
+                var gridItem = document.createElement('div');
+
+                gridItem.addEventListener("click", function selezionata(){
+                    this.classList.toggle("selezionata")
+                    console.log("cella selezionata:", i)
+                })
                 
+                gridItem.className = "grid_item";
+                gridItem.textContent += i;
+
+                
+
+                contenitoreGriglia.appendChild(gridItem)
             }
         
     }
@@ -65,20 +89,23 @@ playButton.addEventListener("click", function generaGriglia() {
         
             for (let i = 1; i <= 49; i++){
                 
-                const gridItem = `<div class="grid_item " id="gameCell"> ${i} <div>`;
-                contenitoreGriglia.innerHTML += gridItem;
+                var gridItem = document.createElement('div');
+
+                gridItem.addEventListener("click", function selezionata(){
+                    this.classList.toggle("selezionata")
+                    console.log("cella selezionata:", i)
+                })
+
+                gridItem.className = "grid_item";
+                gridItem.textContent += i;
+
+                contenitoreGriglia.appendChild(gridItem)
 
             }
         
     }
 
 })
-
-
-
-
-
-
 
 
 
